@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliente Api Cotação de ações</title>
+    
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/tableView.css">
+    <link rel="stylesheet" href="./css/cotacaoView.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <header>
+        <p>Cliente API Cotação de ações</p>
+      </header>
+      
+      <div class="search-section">
+        <input id="input" type="text" placeholder="ex: PETR4">
+        <button type="submit" onClick="main();">Pesquisar</button>
+      
+      </div>
+      
+      <div class="tableView" id="view">
+        <!-- tabela com os preços da cotação -->
+            <div class="tableView-content">         
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Abertura</th>
+                    <th>Fechamento</th>
+                  </tr>
+                </thead>
+                <tbody id="historic-tb"></tbody>
+      
+              </table>
+            </div>
+        <!-- resumo da cotação -->
+            <div class="tableView-content">
+              <div class="cotacaoView-flex-collumn">
+                <div>
+                  <!-- cotação -->
+                    <span>Cotação</span>
+                    <span id="symbol"></span>
+                </div>
+
+                <div class="flex-row-Center">
+                  <div>
+                    <span>Mínima</span>
+                    <p id="min"></p>
+                    <!-- min -->
+                  </div>
+                  <div>
+                    <span>Média</span>
+                    <p id="avg"></p>
+                    <!-- media -->
+                  </div>
+                  <div>
+                    <span>Máxima</span>
+                    <p id="max"></p>
+                    <!-- maxima -->
+                  </div>
+                </div>
+                    <!-- flex-row-Center -->
+
+                <div></div>
+
+              </div>
+                <!-- cotacaoView-flex-collumn -->
+            </div>
+      </div>
+        
+    </div>  <!-- div container -->
+    
+    <div id="error"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

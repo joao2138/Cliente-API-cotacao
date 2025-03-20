@@ -1,0 +1,31 @@
+.cotacaoView-flex-collumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  background-color: #eaeaea;
+  border-radius: 10px;
+}
+
+.flex-row-Center{
+  display: flex;
+  justify-content: space-between;
+
+  width: 96%;
+  /* border: 1px solid greenyellow; */
+}
+.flex-row-Center *{
+  text-align: center;
+}
+
+.flex-row-Center span{
+  font-size: 104%;
+}
+
+.cotacaoView-flex-collumn span{
+  font-weight: 700;
+}
