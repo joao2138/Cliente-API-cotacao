@@ -13,8 +13,8 @@ async function main() {
 
   try {
 
-    let querry = validade();
-    console.log(querry);
+    let querry = validate();
+    // console.log(querry);
 
     const data = await Get(querry);
     update(data);
@@ -36,7 +36,7 @@ async function main() {
 }
 
 
-function validade(){
+function validate(){
   if (apiKey != null) {
     if (symbol.length < 5) {
       throw new Error("Invalid API call");
@@ -117,7 +117,7 @@ function update(data) {
 
     tData.textContent = openValue.toFixed(2);
     tData2.textContent = closeValue.toFixed(2);
-    console.log(key);
+    
     tData3.textContent = new Intl.DateTimeFormat("pt-BR").format(new Date(key));
 
     tRow.appendChild(tData3);
